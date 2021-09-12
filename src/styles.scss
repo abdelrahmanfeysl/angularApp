@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+$bgColor:#131722;
+$lightBgColor:#24baef;
+$bgTransparent:rgba(36,186,239,0.6);
+$fontColor:#fff;
+$borderColor:#a8a8a83d;
+$borderHiegt:1px;
+$secondFontColor:#949cb0;
+
+body{
+    background-color: #131722;
+    color:$fontColor;
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    font-size: 18px;
+    color:$fontColor;
+    text-decoration: none;
+}
+a:hover{
+    font-size: 18px;
+    color:$fontColor;
+    text-decoration: none
+}
+.brd{
+    height: 1px;
+    background-color:$secondFontColor;
+}
+
+.second-color{
+    color:$secondFontColor;
+}
+.votAvg{
+    background-color: $lightBgColor;
+    position: absolute;
+    top:0;
+    padding: 5px;
+    font-weight: 700;
+    // width:20px;
+    right:10px;
+}

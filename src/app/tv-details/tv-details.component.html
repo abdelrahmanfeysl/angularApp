@@ -1,0 +1,36 @@
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-4">
+            <img [src]="prefix + movieDetails?.poster_path" class="w-100" alt="movieDetails?.title">
+        </div>
+        <div class="col-md-8 my-5">
+            <div class="d-flex flex-column">
+                <h2>{{ movieDetails?.title }}</h2>
+            <div></div>
+            <p class="py-3 font-weight-boldder">
+               {{ movieDetails?.tagline }} 
+            </p>
+            </div>
+            <span class="btn btn-primary btn-sm mx-1 p-1" *ngFor="let gen of movieDetails.genres">
+                {{ gen.name }}
+            </span> 
+            <p class="my-4">
+                Vote : {{ movieDetails?.vote_average }}
+            </p>
+            <p>
+                Vote Count : {{ movieDetails?.vote_count }}
+            </p>
+            <p>
+                Popularity : {{ movieDetails?.popularity }}
+            </p>
+            <p>
+                Relase Date : {{ movieDetails?.release_date }}
+            </p>
+            <p >
+                {{ movieDetails?.overview }} 
+             </p>
+           
+        </div>
+        
+    </div>
+</div>

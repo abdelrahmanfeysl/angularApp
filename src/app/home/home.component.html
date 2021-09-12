@@ -1,0 +1,69 @@
+<app-homeheader [trendingMovies]='getMovice'></app-homeheader>
+<div class="container">
+    <div class="row py-5">
+        <div class="col-sm-4 d-flex align-items-center">
+            <div class="">
+                <div class="brd w-25 mb-4"></div>
+                <h2 >Trending Movies To Watch  <br/> Right Now</h2>
+                <p class="second-color my-2">Most watched Movies by days</p>
+                <div class="brd w-75 mt-2"></div>
+                </div>
+            
+        </div>
+        <div *ngFor ='let mov of getMovice' class="col-sm-2">
+            <div class="movie position-relative">
+                <a [routerLink] = '["/getDetail" , mov.id]'>
+                    <img [src]="baseUrl+mov.poster_path" class="w-100" alt="">
+                    <p class="votAvg">{{ mov.vote_average }}</p>
+                    <h3 class="h6 my-2">{{mov.title}}</h3>
+                </a>
+               
+            </div>
+            
+        </div>
+    </div>
+    <div class="row py-5">
+        <div class="col-sm-4 d-flex align-items-center">
+            <div class="">
+                <div class="brd w-25 mb-4"></div>
+            <h2 >Trending Tvs To Watch  <br/> Right Now</h2>
+            <p class="second-color my-2">Most watched Tvs by days</p>
+            <div class="brd w-75 mt-2"></div>
+            </div>
+            
+        </div>
+        <div *ngFor ='let tv of getTv' class="col-sm-2">
+            <div class="movie position-relative">
+                <a [routerLink] = '["/getTvDetails" , tv.id]'>
+                    <img [src]="baseUrl+tv.poster_path" class="w-100" alt="">
+                <p class="votAvg">{{ tv.vote_average }}</p>
+                <h3 class="h6 my-2">{{tv.name}}</h3>
+                </a>
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="row py-5">
+        <div class="col-sm-4 d-flex align-items-center">
+            <div class="">
+                <div class="brd w-25 mb-4"></div>
+            <h2 >Trending Pepole To Watch  <br/> Right Now</h2>
+            <p class="second-color my-2">Most watched pepole by days</p>
+            <div class="brd w-75 mt-2"></div>
+            </div>
+            
+        </div>
+        <div *ngFor ='let person of getPersonal' class="col-sm-2">
+            <div class="movie position-relative">
+                <a [routerLink]='["/getPersonDetails" , person.id]'>
+                    <img [src]="baseUrl+person.profile_path" class="w-100" alt="{{ person.name }}">
+                    <h3 class="h6 my-2">{{person.name}}</h3>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
